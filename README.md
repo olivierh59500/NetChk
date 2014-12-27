@@ -21,3 +21,25 @@ You can install these dependencies using pip:
 
 `pip install python-libnmap`
 
+```
+root@kali:~/py# ./netchk.py 
+IP:  192.168.0.71
+CIDR:  /24
+NmapHost: [192.168.0.1 () - up]
+NmapHost: [192.168.0.3 () - up]
+NmapHost: [192.168.0.21 () - up]
+NmapHost: [192.168.0.54 () - up]
+NmapHost: [192.168.0.56 () - up]
+NmapHost: [192.168.0.60 () - up]
+NmapHost: [192.168.0.65 () - up]
+NmapHost: [192.168.0.73 () - up]
+NmapHost: [192.168.0.74 () - up]
+NmapHost: [192.168.0.75 () - up]
+NmapHost: [192.168.0.76 () - up]
+NmapHost: [192.168.0.78 () - up]
+NmapHost: [192.168.0.82 () - up]
+NmapHost: [192.168.0.86 () - up]
+NmapHost: [192.168.0.98 () - up]
+NmapHost: [192.168.0.134 () - up]
+NmapHost: [192.168.0.71 () - up]
+```
