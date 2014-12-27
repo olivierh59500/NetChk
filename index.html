@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Netchk by NinjaSl0th</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Netchk</h1>
+        <h2>Python script to quickly scan and profile joined network</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/NinjaSl0th/NetChk/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/NinjaSl0th/NetChk/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/NinjaSl0th/NetChk" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="netchk" class="anchor" href="#netchk" aria-hidden="true"><span class="octicon octicon-link"></span></a>NetChk</h1>
+
+<p><strong>Please note that this is for a project that I am working on. Expect many errors and constant changes if you decide to mess with this</strong></p>
+
+<p>Python script to quickly scan and profile joined network. </p>
+
+<p>This script can also determine the vendor of a MAC address through public API using the requests library </p>
+
+<p>Dependencies:
+netifaces
+netaddr
+iptools
+libnmap
+requests</p>
+
+<p>You can install these dependencies using pip:</p>
+
+<p><code>pip install netifaces</code></p>
+
+<p><code>pip install netaddr</code></p>
+
+<p><code>pip install iptools</code></p>
+
+<p><code>pip install python-libnmap</code></p>
+
+<p><code>pip install requests</code></p>
+
+<p><strong>OUTPUT</strong></p>
+
+<pre><code>root@kali:~/py# ./netchk.py 
+IP:  192.168.0.71
+CIDR:  /24
+NmapHost: [192.168.0.1 () - up] 00:14
+NmapHost: [192.168.0.3 () - up] 5C:DA
+NmapHost: [192.168.0.21 () - up] 28:18
+NmapHost: [192.168.0.54 () - up] D0:E7
+NmapHost: [192.168.0.56 () - up] FC:C2
+NmapHost: [192.168.0.60 () - up] 78:1C
+NmapHost: [192.168.0.65 () - up] D0:E7
+NmapHost: [192.168.0.73 () - up] 30:F9
+NmapHost: [192.168.0.74 () - up] 00:90
+NmapHost: [192.168.0.75 () - up] 00:16
+NmapHost: [192.168.0.76 () - up] 40:F0
+NmapHost: [192.168.0.78 () - up] 28:18
+NmapHost: [192.168.0.82 () - up] EC:E0
+NmapHost: [192.168.0.86 () - up] 68:A8
+NmapHost: [192.168.0.98 () - up] B0:E8
+NmapHost: [192.168.0.134 () - up] D8:EB
+NmapHost: [192.168.0.71 () - up] 
+Check HW vendor? (y/n): y
+
+
+
+
+NmapHost: [192.168.0.1 () - up]00:14
+Dell Inc 
+
+NmapHost: [192.168.0.3 () - up]5C:DA
+Murata Manufacturing Co., Ltd. 
+
+NmapHost: [192.168.0.21 () - up]28:18
+Microsoft Corporation 
+
+NmapHost: [192.168.0.54 () - up]D0:E7:82
+</code></pre>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
