@@ -11,8 +11,13 @@ netaddr
 iptools
 libnmap
 
-You can install these dependencies using pip
+You can install these dependencies using pip:
+
 `pip install netifaces`
+
 `pip install netaddr`
+
 `pip install iptools`
+
 `pip install python-libnmap`
+
