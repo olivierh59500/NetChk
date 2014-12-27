@@ -33,11 +33,22 @@ if 'eth0' in a:
 		#print rng[0]
 		cmd = ip+cidr
 		#simple nmap scan to quickly discover assets
-		nm = NmapProcess('"'+cmd+'"', options="-sP -n -T5 --open")
+		nm = NmapProcess('"'+cmd+'"', options="-sn -n -T5 --open")
 		#run the scan
 		runscan = nm.run()
 		nmap_report = NmapParser.parse(nm.stdout)
+		#open file to write results to. Add try and except for some error validation D:
+		try:
+			out = open('nmap.txt','a')
+		except:
+			exit("There was an error opening the output file!")
 		for scanned_hosts in nmap_report.hosts:
-			print scanned_hosts
+			print scanned_hosts , scanned_hosts.mac
+			#write the results. Convert object to string so it doesn't return
+			#a buffer error/exception.
+			out.write(str(scanned_hosts))
+			out.write(str(scanned_hosts.mac))
+			out.write("\n")
+		out.close()
 else:
 	exit()
