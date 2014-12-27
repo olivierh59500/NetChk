@@ -1,15 +1,18 @@
 NetChk
 ======
 
-*Please note that this is for a project that I am working on. Expect many errors and constant changes if you decide to mess with this*
+**Please note that this is for a project that I am working on. Expect many errors and constant changes if you decide to mess with this**
 
-Python script to quickly scan and profile joined network
+Python script to quickly scan and profile joined network. 
+
+This script can also determine the vendor of a MAC address through public API using the requests library 
 
 Dependencies:
 netifaces
 netaddr
 iptools
 libnmap
+requests
 
 You can install these dependencies using pip:
 
