@@ -24,6 +24,8 @@ You can install these dependencies using pip:
 
 `pip install python-libnmap`
 
+`pip install requests`
+
 
 **OUTPUT**
 ```
