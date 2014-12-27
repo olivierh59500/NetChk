@@ -1,7 +1,7 @@
 NetChk
 ======
 
-**Please note that this is for a project that I am working on. Expect many errors and constant changes if you decide to mess with this**
+**Please note that this is for a project that I am working on. Expect many errors and constant changes if you decide to mess with this. This was scritped in Kali linux/Debian and has not been tested in other distros.**
 
 Python script to quickly scan and profile joined network. 
 
