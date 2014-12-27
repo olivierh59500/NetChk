@@ -5,6 +5,25 @@ from netaddr import *
 import iptools
 from libnmap.process import NmapProcess
 from libnmap.parser import NmapParser
+import requests
+import re
+
+def vendor():
+	print "\n\n\n"
+	url = "http://www.macvendorlookup.com/api/v2/"
+	resin = open("nmap.txt","r")
+	for line in resin:
+		i = re.findall(r"(\w\w:\w\w:\w\w:\w\w:\w\w:\w\w)",line)
+		if i:
+			#print i[0]
+			fullurl = url+str(i[0])
+			#print fullurl
+			data = requests.get(fullurl)
+			jresponse = data.json()
+			print line,"\r",jresponse[0]['company'],"\n"
+		else:
+			continue
+	
 
 a = netifaces.interfaces()
 
@@ -50,5 +69,13 @@ if 'eth0' in a:
 			out.write(str(scanned_hosts.mac))
 			out.write("\n")
 		out.close()
+		try:
+			chkv = raw_input("Check HW vendor? (y/n): ")
+			if chkv == "Y" or chkv == "y":
+				vendor()
+			else:
+				exit()
+		except:
+			exit()
 else:
 	exit()
