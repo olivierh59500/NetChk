@@ -52,7 +52,7 @@ if 'eth0' in a:
 		#print rng[0]
 		cmd = ip+cidr
 		#simple nmap scan to quickly discover assets
-		nm = NmapProcess('"'+cmd+'"', options="-sn -n -T5 --open")
+		nm = NmapProcess('"'+cmd+'"', options="-sn -n -T5 --open --max-retries 1 --host-timeout 4s")
 		#run the scan
 		runscan = nm.run()
 		nmap_report = NmapParser.parse(nm.stdout)
