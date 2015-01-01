@@ -7,8 +7,11 @@ from libnmap.process import NmapProcess
 from libnmap.parser import NmapParser
 import requests
 import re
+from time import sleep
 
 def vendor():
+	outf = open('vendor-results.txt','a')
+	print "Results will be saved as 'vendor-results.txt'"
 	print "\n\n\n"
 	url = "http://www.macvendorlookup.com/api/v2/"
 	resin = open("nmap.txt","r")
@@ -21,8 +24,14 @@ def vendor():
 			data = requests.get(fullurl)
 			jresponse = data.json()
 			print line,"\r",jresponse[0]['company'],"\n"
+			outf.write(line)
+			outf.write("--")
+			outf.write(jresponse[0]['company'])
+			outf.write("\n")
+			sleep(2)
 		else:
 			continue
+	outf.close()
 	exit()
 	
 
