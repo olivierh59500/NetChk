@@ -25,7 +25,6 @@ def vendor():
 			jresponse = data.json()
 			print line,"\r",jresponse[0]['company'],"\n"
 			outf.write(line)
-			outf.write("--")
 			outf.write(jresponse[0]['company'])
 			outf.write("\n")
 			sleep(2)
